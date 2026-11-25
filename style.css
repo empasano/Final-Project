@@ -1644,3 +1644,127 @@ textarea {
   }
 
 }
+
+/* ANIMAL EMERGENCY HOTLINES */
+
+.hotline-section {
+  background: #FFF8EF;
+  border-radius: 20px;
+  scroll-margin-top: 100px;
+}
+
+.hotline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.hotline-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e7e4dc;
+  border-radius: 18px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.hotline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  background: #edf0e7;
+  border-radius: 14px;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.hotline-card h3 {
+  color: #28342a;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.hotline-org {
+  color: #52734D;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hotline-card p {
+  color: #73796f;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 15px 0;
+  flex-grow: 1;
+}
+
+.hotline-number {
+  display: block;
+  color: #52734D;
+  font-size: 26px;
+  margin: 12px 0 18px;
+}
+
+.hotline-call {
+  display: block;
+  background: #52734D;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.hotline-call:hover {
+  background: #344d36;
+  color: white;
+}
+
+.hotline-source {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #73796f;
+  margin-top: 14px;
+}
+
+.hotline-warning {
+  background: #f7ead7;
+  color: #805d30;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 25px;
+  line-height: 1.7;
+}
+
+.hotline-disclaimer {
+  font-size: 12px;
+  color: #73796f;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE HOTLINE SECTION */
+
+@media (max-width: 1050px) {
+  .hotline-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .hotline-grid {
+    grid-template-columns: 1fr;
+  }
+}
