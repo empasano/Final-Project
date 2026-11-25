@@ -1,0 +1,994 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawConnect | Every Paw Deserves a Chance</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">🐾</span>
+      <span>PAW<span>CONNECT</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#adopt" class="nav-link">Adopt</a>
+      <a href="#help" class="nav-link">Help</a>
+      <a href="#involved" class="nav-link">Get Involved</a>
+      <a href="#care" class="nav-link">Pet Care</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+
+    <a class="header-cta" href="#adopt">Find a friend ↗</a>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+
+    <section class="page-section hero-section" id="home">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          ANIMAL WELFARE COMMUNITY
+        </span>
+
+        <h1>Every paw deserves <em>a chance.</em></h1>
+
+        <p class="hero-lede">
+          Small acts of kindness can change an animal's life.
+          Meet a new best friend or discover a simple way to help.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#adopt">
+            Find animals to adopt →
+          </a>
+
+          <a class="button button-outline" href="#help">
+            Help an animal
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span class="avatar-stack">
+            <i>🐶</i>
+            <i>🐱</i>
+            <i>🐾</i>
+          </span>
+
+          <span>
+            <strong>Every little act matters.</strong><br>
+            Be part of a kinder community.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="hero-art">
+
+        <div class="hero-photo">
+          <img
+            src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1100&q=85"
+            alt="A dog and cat resting together">
+        </div>
+
+        <div class="floating-note">
+          <span class="note-icon">💚</span>
+          <span>
+            <strong>Love changes lives</strong>
+            <small>One paw at a time</small>
+          </span>
+        </div>
+
+        <div class="paw-stamp">🐾</div>
+
+      </div>
+
+      <div class="hero-bottom">
+        <span>RESCUE. CARE. CONNECT.</span>
+        <span>SCROLL TO EXPLORE ↓</span>
+      </div>
+
+    </section>
+
+    <!-- INTRODUCTION -->
+
+    <section class="page-section intro-strip">
+
+      <div>
+        <span class="eyebrow">WELCOME TO PAWCONNECT</span>
+        <h2>A little kindness goes a <em>long way.</em></h2>
+      </div>
+
+      <p>
+        Whether you're ready to adopt, want to volunteer,
+        or simply need advice, there's a place for you here.
+      </p>
+
+    </section>
+
+    <!-- ADOPT -->
+
+    <section class="page-section" id="adopt">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="eyebrow">01 / FIND YOUR MATCH</span>
+
+          <h2>Meet your future <em>best friend.</em></h2>
+
+          <p>
+            Get to know the lovely animals waiting for a safe,
+            loving home.
+          </p>
+        </div>
+
+        <button class="button button-primary" id="openUpload">
+          ＋ Add a pet profile
+        </button>
+
+      </div>
+
+      <div class="adopt-toolbar">
+
+        <label class="search-box">
+          <span>⌕</span>
+          <input
+            id="petSearch"
+            type="search"
+            placeholder="Search by name or breed..."
+            aria-label="Search pets">
+        </label>
+
+        <div class="filter-group">
+          <button class="filter-btn selected" data-filter="All">All pets</button>
+          <button class="filter-btn" data-filter="Dog">Dogs</button>
+          <button class="filter-btn" data-filter="Cat">Cats</button>
+          <button class="filter-btn" data-filter="Favorites">♡ Favorites</button>
+        </div>
+
+      </div>
+
+      <div class="pet-grid" id="petGrid"></div>
+
+      <p class="empty-state" id="emptyState" hidden>
+        No pets match your search. Try another name or filter.
+      </p>
+
+      <div class="center-action">
+        <a class="button button-outline" href="#adoption-guide">
+          Learn about the adoption process
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ADOPTION GUIDE -->
+
+    <section class="page-section adoption-guide" id="adoption-guide">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR ADOPTION JOURNEY</span>
+          <h2>Give a paw a <em>forever home.</em></h2>
+          <p>Everything you need to know before adopting a pet.</p>
+        </div>
+      </div>
+
+      <div class="adoption-steps">
+
+        <article class="adoption-step">
+          <span class="step-number">01</span>
+          <h3>Choose a pet</h3>
+          <p>
+            Browse the available animals and find a pet
+            that suits your lifestyle and living situation.
+          </p>
+        </article>
+
+        <article class="adoption-step">
+          <span class="step-number">02</span>
+          <h3>Prepare your requirements</h3>
+          <p>
+            Prepare a valid ID, household information,
+            and details about your experience with pets.
+          </p>
+        </article>
+
+        <article class="adoption-step">
+          <span class="step-number">03</span>
+          <h3>Submit an application</h3>
+          <p>
+            Contact the animal's rescuer or shelter and
+            complete their adoption application.
+          </p>
+        </article>
+
+        <article class="adoption-step">
+          <span class="step-number">04</span>
+          <h3>Meet your future pet</h3>
+          <p>
+            Arrange a meeting and complete any required
+            interview or screening process.
+          </p>
+        </article>
+
+        <article class="adoption-step">
+          <span class="step-number">05</span>
+          <h3>Prepare your home</h3>
+          <p>
+            Prepare food, water, bedding, toys, and a safe
+            environment for your new companion.
+          </p>
+        </article>
+
+        <article class="adoption-step">
+          <span class="step-number">06</span>
+          <h3>Welcome them home</h3>
+          <p>
+            Once approved, welcome your pet and provide
+            lifelong love, attention, and veterinary care.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="adoption-requirements">
+
+        <h3>Before you adopt</h3>
+
+        <ul>
+          <li>Make sure everyone in your household agrees.</li>
+          <li>Be financially prepared for food and veterinary expenses.</li>
+          <li>Provide a safe and comfortable living environment.</li>
+          <li>Be ready for a long-term commitment.</li>
+          <li>Never adopt an animal on impulse.</li>
+        </ul>
+
+        <p>
+          Actual adoption requirements may vary depending
+          on the shelter or rescuer.
+        </p>
+
+      </div>
+
+      <div class="center-action">
+        <a class="button button-primary" href="#adopt">
+          Find your future companion →
+        </a>
+      </div>
+
+    </section>
+
+    <!-- HELP -->
+
+    <section class="page-section help-section" id="help">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">02 / LEND A PAW</span>
+          <h2>Not sure how to help? <em>Start here.</em></h2>
+          <p>Choose a safe, practical way to support an animal in need.</p>
+        </div>
+      </div>
+
+      <div class="feature-grid three">
+
+        <article class="feature-card">
+          <div class="feature-icon">🧡</div>
+          <span class="card-kicker">01 — RESCUE</span>
+          <h3>Found an animal?</h3>
+          <p>
+            Keep a safe distance, offer water if appropriate,
+            and contact a trusted local rescuer or veterinarian.
+          </p>
+
+          <a href="#rescue-guide" class="text-link">
+            Know what to do →
+          </a>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🥣</div>
+          <span class="card-kicker">02 — DONATE</span>
+          <h3>Food & supplies</h3>
+          <p>
+            Useful donations may include pet food, clean towels,
+            carriers, cleaning supplies, and other essentials.
+          </p>
+
+          <a href="#involved" class="text-link">
+            Support a drive →
+          </a>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🩺</div>
+          <span class="card-kicker">03 — GET HELP</span>
+          <h3>Emergency assistance</h3>
+          <p>
+            For injured or distressed animals, seek help from
+            a veterinarian or verified animal welfare group.
+          </p>
+
+          <a href="#rescue-guide" class="text-link">
+            Read safety instructions →
+          </a>
+        </article>
+
+      </div>
+
+      <div class="safety-banner" id="rescue-guide">
+        <span>✳</span>
+
+        <div>
+          <strong>What to do when you find a stray animal</strong>
+
+          <ol>
+            <li>Observe the animal from a safe distance.</li>
+            <li>Avoid chasing or frightening the animal.</li>
+            <li>Offer clean water if it is safe to do so.</li>
+            <li>Record its general location and condition.</li>
+            <li>Contact a verified rescuer or veterinarian.</li>
+            <li>Do not give medication without professional advice.</li>
+          </ol>
+
+          <p>
+            Avoid handling frightened or injured animals
+            unless it is safe.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- GET INVOLVED -->
+
+    <section class="page-section involved-section" id="involved">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">03 / MAKE A DIFFERENCE</span>
+          <h2>Be part of something <em>kind.</em></h2>
+          <p>Small actions can make a real difference in your community.</p>
+        </div>
+      </div>
+
+      <div class="involved-layout">
+
+        <div class="involved-photo">
+          <img
+            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
+            alt="Two dogs enjoying time outdoors">
+
+          <div class="photo-caption">
+            GOOD THINGS HAPPEN WHEN WE COME TOGETHER.
+          </div>
+        </div>
+
+        <div class="involved-options">
+
+          <a class="involved-item" href="#contact">
+            <span class="round-icon">🙌</span>
+            <span>
+              <strong>Volunteer your time</strong>
+              <small>Help at events, shelters, and community activities.</small>
+            </span>
+            <b>↗</b>
+          </a>
+
+          <a class="involved-item" href="#contact">
+            <span class="round-icon">🎁</span>
+            <span>
+              <strong>Support a supply drive</strong>
+              <small>Share essentials with animals and rescuers.</small>
+            </span>
+            <b>↗</b>
+          </a>
+
+          <a class="involved-item" href="#contact">
+            <span class="round-icon">📣</span>
+            <span>
+              <strong>Share a story</strong>
+              <small>Spread awareness and celebrate happy endings.</small>
+            </span>
+            <b>↗</b>
+          </a>
+
+          <a class="involved-item" href="#contact">
+            <span class="round-icon">📅</span>
+            <span>
+              <strong>Join a community event</strong>
+              <small>Connect with people who care about animal welfare.</small>
+            </span>
+            <b>↗</b>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PET CARE -->
+
+    <section class="page-section care-section" id="care">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">04 / LEARN & CARE</span>
+          <h2>Care better, love <em>better.</em></h2>
+          <p>Simple, responsible care helps pets thrive.</p>
+        </div>
+      </div>
+
+      <div class="care-grid">
+
+        <article class="care-card">
+          <span>🥗</span>
+          <h3>Everyday essentials</h3>
+          <p>
+            Provide clean water, suitable food, a safe resting
+            place, and regular attention.
+          </p>
+        </article>
+
+        <article class="care-card">
+          <span>🩺</span>
+          <h3>Health & prevention</h3>
+          <p>
+            Keep up with veterinary checkups, vaccinations,
+            parasite prevention, and grooming.
+          </p>
+        </article>
+
+        <article class="care-card">
+          <span>🐕</span>
+          <h3>Kind behavior</h3>
+          <p>
+            Use patience, consistency, enrichment, and
+            reward-based training to build trust.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="care-reminder">
+        <span>🐾</span>
+
+        <div>
+          <strong>Every pet is different.</strong>
+          <p>
+            Ask a qualified veterinarian for advice about
+            your animal's specific health and care needs.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="page-section about-section" id="about">
+
+      <div class="about-copy">
+
+        <span class="eyebrow">05 / OUR STORY</span>
+
+        <h2>A kinder community <em>starts with us.</em></h2>
+
+        <p>
+          PawConnect is an animal welfare community concept
+          built around one simple belief: every animal deserves
+          compassion, safety, and a chance at a loving home.
+        </p>
+
+        <p>
+          We bring animal lovers together to discover adoptable
+          pets, learn responsible care, and find meaningful
+          ways to help.
+        </p>
+
+        <a class="button button-primary" href="#contact">
+          Get in touch →
+        </a>
+
+      </div>
+
+      <div class="about-art">
+        <div class="about-circle">🐾</div>
+        <div class="about-sticker">
+          KINDNESS<br>LOOKS GOOD<br>ON EVERYONE.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="page-section contact-section" id="contact">
+
+      <div class="contact-heading">
+
+        <span class="eyebrow">06 / SAY HELLO</span>
+
+        <h2>Let's make a difference <em>together.</em></h2>
+
+        <p>
+          Have a question, want to volunteer, or interested
+          in adopting? Send a message.
+        </p>
+
+      </div>
+
+      <form class="contact-form" id="contactForm">
+
+        <div class="form-row">
+
+          <label>
+            Your name
+            <input name="name" required placeholder="e.g. Alex Santos">
+          </label>
+
+          <label>
+            Email address
+            <input name="email" type="email" required placeholder="you@example.com">
+          </label>
+
+        </div>
+
+        <label>
+          I'm interested in
+
+          <select name="interest" id="contactInterest">
+            <option>Adopting a pet</option>
+            <option>Volunteering</option>
+            <option>Donating supplies</option>
+            <option>Pet care information</option>
+            <option>Other</option>
+          </select>
+
+        </label>
+
+        <label>
+          Your message
+
+          <textarea
+            name="message"
+            id="contactMessage"
+            rows="4"
+            required
+            placeholder="Write your message here..."></textarea>
+        </label>
+
+        <button class="button button-primary" type="submit">
+          Send message →
+        </button>
+
+        <p class="form-feedback" id="formFeedback" role="status"></p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark">🐾</span>
+        <span>PAW<span>CONNECT</span></span>
+      </a>
+
+      <p>
+        Every paw deserves a chance.<br>
+        Rescue. Care. Connect.
+      </p>
+
+      <a href="#home" class="back-top">BACK TO TOP ↑</a>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 PAWCONNECT</span>
+      <span>MADE WITH CARE ♡</span>
+    </div>
+
+    <p class="disclaimer">
+      Demo website. Sample animal profiles and contact forms
+      are for demonstration purposes only.
+    </p>
+
+  </footer>
+
+  <!-- ADD / EDIT PET PROFILE -->
+
+  <dialog class="modal" id="uploadModal">
+
+    <form id="uploadForm" class="modal-card">
+
+      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
+
+      <span class="eyebrow">ADD TO THE COMMUNITY</span>
+
+      <h2 id="uploadTitle">Share a pet profile.</h2>
+
+      <p class="modal-intro">
+        Tell us about the animal. Only the name, animal type,
+        and photo are required. Leave unknown information blank.
+      </p>
+
+      <label class="upload-drop" for="petPhoto">
+
+        <span class="upload-preview" id="uploadPreview">＋</span>
+
+        <strong>Choose a pet photo</strong>
+        <small>JPG, PNG, or WEBP · up to 5 MB</small>
+
+        <input
+          id="petPhoto"
+          type="file"
+          accept="image/png,image/jpeg,image/webp">
+
+      </label>
+
+      <!-- BASIC INFORMATION -->
+
+      <div class="form-section-heading">
+        <span>01</span>
+        <h3>Basic information</h3>
+      </div>
+
+      <div class="form-row">
+
+        <label>
+          Pet's name *
+          <input id="newPetName" required maxlength="35" placeholder="e.g. Sandy">
+        </label>
+
+        <label>
+          Animal type *
+          <select id="newPetType">
+            <option>Dog</option>
+            <option>Cat</option>
+          </select>
+        </label>
+
+      </div>
+
+      <div class="form-row">
+
+        <label>
+          Breed
+          <input id="newPetBreed" placeholder="e.g. Persian mix">
+        </label>
+
+        <label>
+          Sex
+          <select id="newPetSex">
+            <option value="">Unknown</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </label>
+
+      </div>
+
+      <div class="form-row">
+
+        <label>
+          Birthday
+          <input id="newPetBirthday" type="date">
+        </label>
+
+        <label>
+          Age
+          <input id="newPetAge" placeholder="e.g. 8 months">
+        </label>
+
+      </div>
+
+      <div class="form-row">
+
+        <label>
+          Weight
+          <input id="newPetWeight" placeholder="e.g. 3 kg">
+        </label>
+
+        <label>
+          Size
+          <select id="newPetSize">
+            <option value="">Unknown</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </label>
+
+      </div>
+
+      <label>
+        Adoption status
+        <select id="newPetStatus">
+          <option>Available for adoption</option>
+          <option>Under observation</option>
+          <option>Adoption pending</option>
+          <option>Adopted</option>
+        </select>
+      </label>
+
+      <label>
+        Short description
+        <textarea
+          id="newPetDescription"
+          rows="3"
+          maxlength="180"
+          placeholder="A short introduction to the animal..."></textarea>
+      </label>
+
+      <!-- BACKGROUND -->
+
+      <div class="form-section-heading">
+        <span>02</span>
+        <h3>Background & rescue story</h3>
+      </div>
+
+      <label>
+        Date rescued
+        <input id="newPetRescueDate" type="date">
+      </label>
+
+      <label>
+        Where was the animal found?
+        <input id="newPetLocation" placeholder="e.g. Alabang, Muntinlupa">
+      </label>
+
+      <label>
+        Current shelter or foster home
+        <input id="newPetShelter" placeholder="Name of shelter or general location">
+      </label>
+
+      <label>
+        Rescue story
+        <textarea
+          id="newPetStory"
+          rows="4"
+          placeholder="How did the animal end up in the adoption center?"></textarea>
+      </label>
+
+      <label>
+        Previous ownership
+        <textarea
+          id="newPetOwners"
+          rows="3"
+          placeholder="e.g. Previously owned, surrendered, or found as a stray. Avoid private personal information."></textarea>
+      </label>
+
+      <!-- HEALTH -->
+
+      <div class="form-section-heading">
+        <span>03</span>
+        <h3>Health & medical information</h3>
+      </div>
+
+      <div class="form-row">
+
+        <label>
+          Vaccination status
+          <select id="newPetVaccination">
+            <option value="">Unknown</option>
+            <option>Fully vaccinated</option>
+            <option>Partially vaccinated</option>
+            <option>Not yet vaccinated</option>
+          </select>
+        </label>
+
+        <label>
+          Spayed / neutered
+          <select id="newPetNeutered">
+            <option value="">Unknown</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+
+      </div>
+
+      <label>
+        Allergies
+        <textarea
+          id="newPetAllergies"
+          rows="2"
+          placeholder="e.g. Chicken allergy, no known allergies"></textarea>
+      </label>
+
+      <label>
+        Medical history
+        <textarea
+          id="newPetMedical"
+          rows="3"
+          placeholder="Past illnesses, injuries, treatments, or surgeries"></textarea>
+      </label>
+
+      <label>
+        Current medications
+        <textarea
+          id="newPetMedication"
+          rows="2"
+          placeholder="Any prescribed medication or treatment"></textarea>
+      </label>
+
+      <label>
+        Dietary requirements
+        <textarea
+          id="newPetDiet"
+          rows="2"
+          placeholder="Preferred food or special diet"></textarea>
+      </label>
+
+      <!-- PERSONALITY -->
+
+      <div class="form-section-heading">
+        <span>04</span>
+        <h3>Personality & lifestyle</h3>
+      </div>
+
+      <label>
+        Personality
+        <textarea
+          id="newPetPersonality"
+          rows="3"
+          placeholder="e.g. Affectionate, shy, playful, curious"></textarea>
+      </label>
+
+      <div class="form-row">
+
+        <label>
+          Likes
+          <textarea
+            id="newPetLikes"
+            rows="3"
+            placeholder="Favorite toys, treats, activities"></textarea>
+        </label>
+
+        <label>
+          Dislikes
+          <textarea
+            id="newPetDislikes"
+            rows="3"
+            placeholder="Fears, loud noises, unfamiliar people"></textarea>
+        </label>
+
+      </div>
+
+      <div class="form-row">
+
+        <label>
+          Good with children?
+          <select id="newPetChildren">
+            <option value="">Unknown</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Needs supervision</option>
+          </select>
+        </label>
+
+        <label>
+          Good with other pets?
+          <select id="newPetOtherPets">
+            <option value="">Unknown</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Needs gradual introduction</option>
+          </select>
+        </label>
+
+      </div>
+
+      <label>
+        Energy level
+        <select id="newPetEnergy">
+          <option value="">Unknown</option>
+          <option>Low</option>
+          <option>Moderate</option>
+          <option>High</option>
+        </select>
+      </label>
+
+      <label>
+        Training & habits
+        <textarea
+          id="newPetTraining"
+          rows="3"
+          placeholder="e.g. Litter trained, house trained, leash trained"></textarea>
+      </label>
+
+      <label>
+        Special needs
+        <textarea
+          id="newPetNeeds"
+          rows="3"
+          placeholder="Any additional care or accommodation needed"></textarea>
+      </label>
+
+      <label>
+        Ideal home
+        <textarea
+          id="newPetHome"
+          rows="3"
+          placeholder="What kind of household would suit this animal?"></textarea>
+      </label>
+
+      <button class="button button-primary full-button" id="savePetButton" type="submit">
+        Add pet profile →
+      </button>
+
+      <p class="form-feedback" id="uploadFeedback" role="status"></p>
+
+    </form>
+
+  </dialog>
+
+  <!-- DETAILED PET PROFILE -->
+
+  <dialog class="modal profile-modal" id="petModal">
+
+    <div class="modal-card pet-modal-card">
+
+      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
+
+      <img id="detailImage" class="detail-image" alt="Pet profile">
+
+      <span class="eyebrow">MEET YOUR FUTURE COMPANION</span>
+
+      <div class="profile-heading">
+        <h2 id="detailName"></h2>
+        <span class="profile-status" id="detailStatus"></span>
+      </div>
+
+      <p id="detailText"></p>
+
+      <div class="profile-information" id="detailInformation"></div>
+
+      <a class="button button-outline full-button" href="#adoption-guide" id="detailGuide">
+        Read the adoption guide
+      </a>
+
+      <a class="button button-primary full-button" href="#contact" id="detailAdopt">
+        Ask about adoption →
+      </a>
+
+    </div>
+
+  </dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
